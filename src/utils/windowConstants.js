@@ -1,0 +1,27 @@
+export const WINDOW = {
+
+    MIN_WIDTH: 400,
+
+    MIN_HEIGHT: 300,
+
+    TITLEBAR_HEIGHT: 46,
+
+    BORDER_RADIUS: 16,
+
+    SNAP_THRESHOLD: 24,
+
+    DOUBLE_CLICK_TIME: 300,
+
+    DEFAULT_WIDTH: 900,
+
+    DEFAULT_HEIGHT: 520
+
+};
+
+export const DESKTOP = {
+
+    DOCK_HEIGHT: 80,
+
+    TASKBAR_HEIGHT: 0
+
+};

@@ -1,17 +1,15 @@
-import Sidebar from './Dock';
-import TopBar from './TopBar';
-import Workspace from './Workspace';
-import StatusBar from './StatusBar';
+import Wallpaper from "./Wallpaper";
+import WindowManager from "./WindowManager";
+import Dock from "./Dock";
+import Taskbar from "./Taskbar";
 
-export default function Layout() {
+export default function Desktop() {
     return (
-        <div className="app">
-            <TopBar />
-            <div className="main">
-                <Sidebar />
-                <Workspace />
-            </div>
-            <StatusBar />
-        </div>
+        <main className="desktop">
+            <Wallpaper />
+            <WindowManager />
+            <Dock />
+            <Taskbar />
+        </main>
     );
 }

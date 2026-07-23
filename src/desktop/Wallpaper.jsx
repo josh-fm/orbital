@@ -1,11 +1,22 @@
-export default function TopBar() {
-    return (
-        <header className="topbar">
-            <h1>Orbital</h1>
+import Nebula from "./effects/Nebula";
+import Starfield from "./effects/Starfield";
+import SpaceBackground from "./effects/SpaceBackground";
 
-            <div>
-                CPU: 0% | RAM: 3.2GB
-            </div>
-        </header>
+export default function Wallpaper() {
+
+    return (
+
+        <div className="wallpaper">
+            <SpaceBackground />
+
+            <Nebula />
+
+            <Starfield />
+
+            <div className="vignette"></div>
+
+        </div>
+
     );
+
 }

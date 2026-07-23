@@ -1,5 +1,20 @@
-import Layout from "./components/layout/Layout";
+import Desktop from "./desktop/Desktop";
+import {
+
+    DesktopProvider
+
+} from "./context/DesktopContext";
 
 export default function App() {
-    return <Layout />;
+
+    return (
+
+        <DesktopProvider>
+
+            <Desktop />
+
+        </DesktopProvider>
+
+    );
+
 }

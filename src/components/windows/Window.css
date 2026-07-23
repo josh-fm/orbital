@@ -1,0 +1,263 @@
+.window {
+
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(18, 28, 48, 0.95) 0%,
+            rgba(10, 18, 34, 0.92) 100%
+        );
+
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+
+    border: 1px solid rgba(130, 185, 255, 0.15);
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 12px 40px rgba(0,0,0,.45),
+        0 0 0 1px rgba(255,255,255,.03),
+        inset 0 1px rgba(255,255,255,.05);
+
+    overflow: hidden;
+
+    user-select: none;
+
+    transition:
+        left .12s ease,
+        top .12s ease,
+        width .18s ease,
+        height .18s ease,
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+
+
+.window.active {
+
+    border-color: rgba(110,190,255,.45);
+
+    box-shadow:
+        0 22px 70px rgba(0,0,0,.55),
+        0 0 30px rgba(70,140,255,.08),
+        inset 0 1px rgba(255,255,255,.08);
+
+}
+
+
+
+.windowTitlebar {
+
+    height: 46px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: move;
+
+    position: relative;
+
+    background:
+
+        linear-gradient(
+
+            rgba(255,255,255,.05),
+
+            rgba(255,255,255,.015)
+
+        );
+
+    border-bottom:
+
+        1px solid rgba(255,255,255,.06);
+
+}
+
+
+
+.windowControls {
+
+    position: absolute;
+
+    left: 18px;
+
+    display: flex;
+
+    gap: 8px;
+
+}
+
+
+
+.windowButton {
+
+    width: 12px;
+
+    height: 12px;
+
+    border-radius: 50%;
+
+    transition:
+
+        transform .15s,
+
+        filter .2s;
+
+}
+
+
+
+.windowButton:hover {
+
+    transform: scale(1.15);
+
+    filter: brightness(1.15);
+
+}
+
+
+
+.windowButton.close {
+
+    background: #ff5f57;
+
+}
+
+
+
+.windowButton.minimize {
+
+    background: #febc2e;
+
+}
+
+
+
+.windowButton.maximize {
+
+    background: #28c840;
+
+}
+
+
+
+.windowTitle {
+
+    color: #d7ecff;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    letter-spacing: .04em;
+
+    pointer-events: none;
+
+}
+
+
+
+.windowContent {
+
+    flex: 1;
+
+    overflow: auto;
+
+    background: rgba(4,12,24,.22);
+
+}
+
+
+
+.windowContent::-webkit-scrollbar {
+
+    width: 10px;
+
+}
+
+
+
+.windowContent::-webkit-scrollbar-track {
+
+    background: transparent;
+
+}
+
+
+
+.windowContent::-webkit-scrollbar-thumb {
+
+    background: rgba(255,255,255,.12);
+
+    border-radius: 100px;
+
+}
+
+
+
+.windowContent::-webkit-scrollbar-thumb:hover {
+
+    background: rgba(255,255,255,.2);
+
+}
+
+
+
+.resizeHandle {
+
+    position: absolute;
+
+    right: 0;
+
+    bottom: 0;
+
+    width: 18px;
+
+    height: 18px;
+
+    cursor: nwse-resize;
+
+}
+
+
+
+.resizeHandle::before {
+
+    content: "";
+
+    position: absolute;
+
+    right: 4px;
+
+    bottom: 4px;
+
+    width: 10px;
+
+    height: 10px;
+
+    border-right: 2px solid rgba(160,210,255,.5);
+
+    border-bottom: 2px solid rgba(160,210,255,.5);
+
+}
+
+
+
+.resizeHandle:hover::before {
+
+    border-color: rgba(200,235,255,.9);
+
+}
